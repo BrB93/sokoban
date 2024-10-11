@@ -1,8 +1,11 @@
-#ifndef SOKOBAN_H
-#define SOKOBAN_H
+#ifndef __SOKOBAN__
+#define __SOKOBAN__
 
-char **init_board();
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+
+char ** init_board();
 void display_board(char **board);
-void move_player(char **board, int *player_x, int *player_y);
 
 #endif
