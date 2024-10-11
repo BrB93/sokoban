@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "sokoban.h"
 
 
 #define SIZE 10
 
-char ** init_board()
+
+char ** init_board(int pos_i, int pos_j)
 {
 	char ** board = malloc(SIZE * sizeof(char *));
 	for (int i = 0; i < SIZE; i++)
@@ -21,8 +23,7 @@ char ** init_board()
 			}
 		}	
 	}
-
-
+	board[pos_i][pos_j] = 'o';
 
 
 	return board;
